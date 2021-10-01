@@ -12,26 +12,25 @@
   <link rel="stylesheet" href="app.css">
 </head>
 <body>
-
-<div class = "main-box">
-
-  <div class = "col1">
-    <div class="name"> 
-      <img class="img" src="images/image-jeremy.png"><br/>
+<h1 role="empty-heading"></h1>
+<div class = "main-box" role="main">
+  <div class = "col1" role="user-intro">
+    <header class="name" role="header"> 
+      <img class="img" src="images/image-jeremy.png" alt="user-img"><br/>
       
       <p>Report for<br/> <span>Jeremy Robson</span><p>
-    </div>
-    <div class = "navbar">
+      </header>
+    <nav class = "navbar" role="navigation">
       <ul>
         <li>Daily</li> 
         <li>Weekly</li>
         <li>Monthly</li>
       </ul>
-    </div>
+    </nav>
   </div>
 
-  <div class="col2">
-    <div class="daily">
+  <div class="col2" role="user-time-record">
+    <div class="daily" role="daily-time-record">
       
       <div class="work-box">
       <div class="box">
@@ -82,7 +81,7 @@
       </div>
     </div>
 
-    <div class="weekly">
+    <div class="weekly" role="weekly-time record">
       <div class="work-box">
         <div class="box">
           <p class="title">Work</p>
@@ -90,7 +89,7 @@
           <p class="small">Last Week - 36hrs</p> 
         </div>
       </div>
-      <div class = "play-box">
+      <div class = "play-box" >
         <div class="box">
           <p class="title">Play</p>
           <p class="large">10hrs</p>
@@ -127,7 +126,7 @@
       </div>
     </div>
 
-    <div class="monthly">
+    <div class="monthly" roe="monthly-time-record">
       <div class="work-box">
         <div class="box">
           <p class="title">Work</p>
@@ -174,10 +173,10 @@
   </div>
 </div>
   
-  <div class="attribution">
+  <footer class="attribution" role="footer">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Rajbinder Singh</a>.
-  </div>
+  </footer>
 
   <script>
     let list = document.querySelectorAll("li");
