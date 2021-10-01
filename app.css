@@ -149,13 +149,13 @@ ul{
     height:80%;
     width:100%;
     padding:20px;
-
     border-radius: 10px 10px 10px 10px;
     background-color: darkblue;
     color:white;
     box-sizing: border-box; 
     position: absolute;
     bottom:0;
+   line-height: 15px;
 }
 
 
@@ -259,10 +259,10 @@ ul{
     }
     .box{
         display:grid;
-      
         grid-template-columns: auto auto;
         padding-left: 5%;
         height: 95px;
+        
     }
     .title{
         grid-column: 1/3;
