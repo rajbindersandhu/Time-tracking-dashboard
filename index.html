@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<div class = "main-box">
+
+  <div class = "col1">
+    <div class="name"> 
+      <img class="img" src="images/image-jeremy.png"><br/>
+      
+      <p>Report for<br/> <span>Jeremy Robson</span><p>
+    </div>
+    <div class = "navbar">
+      <ul>
+        <li>Daily</li> 
+        <li>Weekly</li>
+        <li>Monthly</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col2">
+    <div class="daily">
+      
+      <div class="work-box">
+      <div class="box">
+          <p class="title">Work</p>
+          <p class="large">5hrs</p>
+          <p class="small">Yesterday - 7hrs</p> 
+      </div>
+    </div>
+      
+      
+       <div class="play-box"> 
+        <div class = "box">
+          <p class="title"> Play</p>
+          <p class="large">1hr</p>
+          <p class="small">Yesterday - 2hrs</p> 
+        </div>
+      </div>
+      <div class="study-box">
+        <div class="box">
+          <p class="title"> Study</p>
+          <p class="large">0hrs</p>
+          <p class="small">Yesterday - 1hr </p> 
+        </div>
+      </div>
+       
+      <div class="exercise-box">
+        <div class="box">
+          <p class="title">Exercise</p>
+          <p class="large">1hrs</p>
+          <p class="small">Yesterday - 1hr </p> 
+        </div>
+      </div>
+     
+      <div class="social-box">
+        <div class="box">
+          <p class="title">Social</p>
+          <p class="large">1hrs</p>
+          <p class="small">Yesterday - 3hr </p> 
+        </div>
+      </div>
+   
+      <div class="self-box">
+        <div class="box">
+          <p class="title">Self Care</p>
+          <p class="large">0hrs</p>
+          <p class="small">Yesterday - 1hr</p> 
+        </div>
+      </div>
+    </div>
+
+    <div class="weekly">
+      <div class="work-box">
+        <div class="box">
+          <p class="title">Work</p>
+          <p class="large">32hrs</p>
+          <p class="small">Last Week - 36hrs</p> 
+        </div>
+      </div>
+      <div class = "play-box">
+        <div class="box">
+          <p class="title">Play</p>
+          <p class="large">10hrs</p>
+          <p class="small">Last Week - 8hrs</p> 
+        </div>
+      </div>
+      <div class="study-box">
+        <div class="box">
+          <p class="title">Study</p>
+          <p class="large">4hrs</p>
+          <p class="small">Last Week - 7hrs</p> 
+        </div>
+      </div>
+      <div class="exercise-box">
+        <div class="box">
+          <p class="title">Exercise</p>
+          <p class="large">4hrs</p>
+          <p class="small">Last Week - 5hrs</p> 
+        </div>
+      </div>
+      <div class="social-box">
+        <div class="box">
+          <p class="title">Social</p>
+          <p class="large">5hrs</p>
+          <p class="small">Last Week - 10hrs</p> 
+        </div>
+      </div>
+      <div class="self-box">
+        <div class="box">
+          <p class="title">Self Care</p>
+          <p class="large">2hrs</p>
+          <p class="small">Last Week - 2hrs</p> 
+        </div>
+      </div>
+    </div>
+
+    <div class="monthly">
+      <div class="work-box">
+        <div class="box">
+          <p class="title">Work</p>
+          <p class="large">103hrs</p>
+          <p class="small">Last Month - 128hrs</p> 
+        </div>
+      </div>
+      <div class = "play-box">
+        <div class="box">
+          <p class="title">Play</p>
+          <p class="large">23hrs</p>
+          <p class="small">Last Month - 29hrs</p> 
+        </div>
+      </div>
+      <div class="study-box">
+        <div class="box">
+          <p class="title">Study</p>
+          <p class="large">13hrs</p>
+          <p class="small">Last Month - 19hrs</p> 
+        </div>
+      </div>
+      <div class="exercise-box">
+        <div class="box">
+          <p class="title">Exercise</p>
+          <p class="large">11hrs</p>
+          <p class="small">Last Month - 18hrs</p> 
+        </div>
+      </div>
+      <div class="social-box">
+        <div class="box">
+          <p class="title">Social</p>
+          <p class="large">21hrs</p>
+          <p class="small">Last Month - 23hrs</p> 
+        </div>
+      </div>
+      <div class="self-box">
+        <div class="box">
+          <p class="title">Self Care</p>
+          <p class="large">7hrs</p>
+          <p class="small">Last Month - 11hrs</p> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Rajbinder Singh</a>.
+  </div>
+
+  <script>
+    let list = document.querySelectorAll("li");
+    list.forEach(item=>{
+      addEventListener("click", handleClick);
+    });
+
+    function handleClick(e){
+      let temp = e.target.innerHTML;
+        
+      if(temp == "Daily"){
+        document.querySelector(".daily").style.display = "grid";
+        document.querySelector(".weekly").style.display = "none";
+        document.querySelector(".monthly").style.display = "none";
+        list.forEach(item=>{
+          if(item.innerHTML == e.target.innerHTML){
+            e.target.style.color = "white";
+          }
+          else{
+            item.style.color="royalblue";
+          }
+        });
+        
+      }
+      else if(temp == "Weekly"){
+        document.querySelector(".weekly").style.display = "grid";
+        document.querySelector(".monthly").style.display = "none";
+        document.querySelector(".daily").style.display = "none";
+        list.forEach(item=>{
+          if(item.innerHTML == e.target.innerHTML){
+            e.target.style.color = "white";
+          }
+          else{
+            item.style.color="royalblue";
+          }
+        });
+      }
+      else if(temp == "Monthly"){
+        document.querySelector(".monthly").style.display = "grid";
+        document.querySelector(".weekly").style.display = "none";
+        document.querySelector(".daily").style.display = "none";
+        list.forEach(item=>{
+          if(item.innerHTML == e.target.innerHTML){
+            e.target.style.color = "white";
+          }
+          else{
+            item.style.color="royalblue";
+          }
+        });
+      }
+    }
+  </script>
+</body>
+</html>
